@@ -143,7 +143,7 @@ def log_menu():
     except (KeyError, IOError):
         os.system('clear')
         print logo
-        print '\033[1;31;1m~~~~ Login menu ~~~~'
+        print '\033[1;93m ~~~~ Login menu ~~~~'
 	print 47 * '-'
         print '\033[1;92m[1] Login with FaceBook'
         print '\033[1;92m[2] Login with token'
@@ -154,7 +154,7 @@ def log_menu():
 
 
 def log_menu_s():
-    s = raw_input(' \033[1;93mSelect One: ')
+    s = raw_input(' \033[1;97m╰─jam➤ ')
     if s == '1':
         log_fb()
     elif s == '2':
@@ -268,9 +268,7 @@ def menu():
     except (KeyError, IOError):
         print ''
         print logo
-        print ''
         print '\033[1;31;1mLogin FB id to continue'
-        print ''
         time.sleep(1)
         log_menu()
 
@@ -312,7 +310,7 @@ def menu():
 
 
 def menu_s():
-    ms = raw_input('\033[1;92mSelect One: ')
+    ms = raw_input('\033[1;97m╰─jam➤ ')
     if ms == '1':
         auto_crack()
     elif ms == '2':
@@ -381,7 +379,7 @@ def a_s():
     id = []
     cps = []
     oks = []
-    a_s = raw_input(' \033[1;93mSelect One: ')
+    a_s = raw_input(' \033[1;97m╰─jam➤ ')
     if a_s == '1':
         os.system('clear')
         print logo
@@ -612,7 +610,7 @@ def c_s():
     id = []
     cps = []
     oks = []
-    a_s = raw_input(' \033[1;93mChoose option: ')
+    a_s = raw_input(' \033[1;97m╰─jam➤ ')
     if a_s == '1':
         os.system('clear')
         print logo
