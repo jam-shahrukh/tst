@@ -81,15 +81,10 @@ def reg():
     else:
         os.system('clear')
         print logo
-        print ''
         print '\tApproved Failed'
-        print ''
         print ' \033[1;92mYour Id Is Not Approved Already '
-        print ''
         print ' \033[1;92mCopy the id and send to admin'
-        print ''
         print ' \033[1;92mYour id: ' + to
-        print ''
         raw_input('\033[1;93m Press enter to send id')
         os.system('xdg-open https://wa.me/+923053176060')
         reg()
@@ -98,14 +93,10 @@ def reg():
 def reg2():
     os.system('clear')
     print logo
-    print ''
     print '\tApproval not detected'
-    print ''
     print ' \033[1;92mCopy and press enter , then select whatsapp to continue'
-    print ''
     id = uuid.uuid4().hex[:50]
     print ' Your id: ' + id
-    print ''
     print ''
     raw_input(' Press enter to go to whatsapp ')
     os.system('xdg-open https://wa.me/+923053176060')
@@ -119,9 +110,7 @@ def reg2():
 def ip():
     os.system('clear')
     print logo
-    print ''
     print '\tCollecting device info'
-    print ''
     
     try:
         ipinfo = requests.get('http://ip-api.com/json/')
@@ -133,18 +122,14 @@ def ip():
     except:
         pass
 
-    print '\033[1;93m Your ip: ' + ips
-    time.sleep(2)
-    print ''
-    print '\033[1;93m Your country: ' + country
-    time.sleep(2)
-    print ''
+    print '\033[1;92m Your ip: ' + ips
+    time.sleep(1)
+    print '\033[1;92m Your country: ' + country
+    time.sleep(1)
     print '\033[1;92m Your region: ' + regi
-    time.sleep(2)
-    print ''
+    time.sleep(1)
     print ' \033[1;92mYour network: ' + network
     time.sleep(1)
-    print ''
     print ' Loading ...'
     time.sleep(1)
     log_menu()
@@ -158,9 +143,8 @@ def log_menu():
     except (KeyError, IOError):
         os.system('clear')
         print logo
-        print ''
         print '\033[1;31;1m~~~~ Login menu ~~~~'
-        print ''
+	print 47 * '-'
         print '\033[1;92m[1] Login with FaceBook'
         print '\033[1;92m[2] Login with token'
         print '\033[1;92m[3] Login with cookies'
@@ -187,9 +171,8 @@ def log_menu_s():
 def log_fb():
     os.system('clear')
     print logo
-    print ''
     print '\033[1;31;1mLogin with id/pass'
-    print ''
+    print 47 * '-'
     lid = raw_input('\033[1;92m Id/mail/no: ')
     pwds = raw_input(' \033[1;93mPassword: ')
     
@@ -202,15 +185,11 @@ def log_fb():
             ts.close()
             menu()
         elif 'www.facebook.com' in q['error']:
-            print ''
             print ' User must verify account before login'
-            print ''
             raw_input('\033[1;92m Press enter to try again ')
             log_fb()
         else:
-            print ''
             print ' Id/Pass may be wrong'
-            print ''
             raw_input(' \033[1;92mPress enter to try again ')
             log_fb()
     except:
@@ -223,11 +202,10 @@ def log_fb():
 def log_token():
     os.system('clear')
     print logo
-    print ''
-    print '\033[1;93mLogin with token'
-    print ''
-    tok = raw_input(' \033[1;92mPaste token here: ')
-    print ''
+    print '\033[1;93mLogin with token\033[1;91m'
+    print 47 * '-'
+    tok = raw_input(' \033[1;92mPaste token here: \033[1;91m')
+    print 47 * '-'
     t_s = open('access_token.txt', 'w')
     t_s.write(tok)
     t_s.close()
@@ -320,20 +298,16 @@ def menu():
     os.system('clear')
     print logo
     tok = open('/sdcard/.hst.txt', 'r').read()
-    print ''
-    print '  \033[1;92mLogged in user: ' + z
-    print ''
-    print ' \033[1;93m Active token: ' + tok
-    print ''
+    print '  \033[1;92mLogged in user: \033[1;91m' + z
+    print 47 * '-'
+    print ' \033[1;93m Active token: \033[1;91m' + tok
     print ' ------------------------------------------ '
-    print ''
     print '\033[1;92m[1] Crack with Name password' 
     print '\033[1;92m[2] Crack with Number password'
     print '\033[1;92m[3] File Extract'
     print '\033[1;92m[4] View token'
     print '\033[1;92m[5] Logout'
     print '\033[1;92m[6] Delete trash files'
-    print ''
     menu_s()
 
 
@@ -371,13 +345,12 @@ def crack():
         log_menu()
     os.system('clear')
     print logo
-    print '\033[1;93m~~~~ Name pass cracking ~~~~'
+    print '\033[1;93m~~~~ Name pass cracking ~~~~\033[1;91m'
     print 47 * '-'
     print '\033[1;92m[1] Public id cloning'
     print '\033[1;92m[2] Followers cloning'
     print '\033[1;92m[3] File cloning'
     print '\033[1;92m[0] Back'
-    print ''
     a_s()
 
 def auto_crack():
@@ -395,13 +368,12 @@ def auto_crack():
 
     os.system('clear')
     print logo
-    print '\033[1;93m~~~~ Name pass cracking ~~~~'
+    print '\033[1;93m~~~~ Name pass cracking ~~~~\033[1;91m'
     print 47 * '-'
     print '\033[1;92m[1] Public id cloning'
     print '\033[1;92m[2] Followers cloning'
     print '\033[1;92m[3] File cloning'
     print '\033[1;92m[B] Back'
-    print ''
     a_s()
 
 
@@ -413,9 +385,9 @@ def a_s():
     if a_s == '1':
         os.system('clear')
         print logo
-        print '\033[1;93m~~~~ Name pass public cracking ~~~~'
+        print '\033[1;93m~~~~ Name pass public cracking ~~~~\033[1;91m'
         print 47 * '-'
-        print '\033[1;93mFor example:123,1234,12345,786,12,1122'
+        print '\033[1;93mFor example:123,1234,12345,786,12,1122\033[1;91m'
         print 47 * '-'
         p1 = raw_input(' \033[1;92m[1]Name + digit: ')
         p2 = raw_input(' \033[1;92m[2]Name + digit: ')
@@ -430,12 +402,9 @@ def a_s():
             os.system('clear')
             print logo
             print '\033[1;93m~~~~Name pass public cracking~~~~'
-            print ''
             print ' \033[1;92mCloning from: ' + z
         except (KeyError, IOError):
-            print ''
             print '\t Invalid user \x1b[0;97m'
-            print ''
             raw_input(' \033[1;92mPress enter to try again ')
             auto_crack()
 
@@ -450,9 +419,9 @@ def a_s():
     elif a_s == '2':
         os.system('clear')
         print logo
-        print '\033[1;93m~~~~ Name pass followers cracking ~~~~'
+        print '\033[1;93m~~~~ Name pass followers cracking ~~~~\033[1;91m'
         print 47 * '-'
-        print ' \033[1;93mFor example:123,1234,12345,786,12,1122'
+        print ' \033[1;93mFor example:123,1234,12345,786,12,1122\033[1;91m'
         print 47 * '-'
         p1 = raw_input(' \033[1;92m[1]Name + digit: ')
         p2 = raw_input(' \033[1;92m[2]Name + digit: ')
@@ -466,13 +435,10 @@ def a_s():
             z = q['name']
             os.system('clear')
             print logo
-            print ''
             print '\033[1;93m~~~~ Name pass followers cracking ~~~~'
             print ' \033[1;92mCloning from: ' + z
         except (KeyError, IOError):
-            print ''
             print '\t Invalid user \x1b[0;97m'
-            print ''
             raw_input('\033[1;92mPress enter to try again ')
             auto_crack()
 
@@ -487,9 +453,9 @@ def a_s():
     elif a_s == '3':
         os.system('clear')
         print logo
-        print '\033[1;93m~~~~ Name pass File cracking ~~~~'
+        print '\033[1;93m~~~~ Name pass File cracking ~~~~\033[1;91m'
         print 47 * '-'
-        print '\033[1;93mFor example:123,1234,12345,786,12,1122'
+        print '\033[1;93mFor example:123,1234,12345,786,12,1122\033[1;91m'
         print 47 * '-'
         p1 = raw_input(' \033[1;92m[1]Name + digit: ')
         p2 = raw_input(' \033[1;92m[2]Name + digit: ')
@@ -508,14 +474,13 @@ def a_s():
     else:
         print ''
         print '\tChoose valid option' + w
-        print ''
         a_s()
     print ' Total ids: ' + str(len(id))
     time.sleep(0.5)
-    print ' \033[1;97mCrack Running '
+    print ' \033[1;97mCrack Running\033[1;91m '
     time.sleep(0.5)
     print 47 * '-'
-    print '\t\033[1;94mJam King Of Facebook\x1b[0;97m'
+    print '\t\033[1;94mJam King Of Facebook\033[1;91m'
     print 47 * '-'
     
     def main(arg):
@@ -593,14 +558,10 @@ def a_s():
 
     p = ThreadPool(30)
     p.map(main, id)
-    print ''
     print 47 * '-'
-    print ''
     print ' \033[1;92mCrack Done'
     print ' \033[1;92mTotal Ok/Cp:' + str(len(oks)) + '/' + str(len(cps))
-    print ''
     print 47 * '-'
-    print ''
     raw_input(' \033[1;93mPress enter to back')
     auto_crack()
 
@@ -613,18 +574,16 @@ def crack_b():
 	os.system('clear')
         print logo
         print '\t File Not Found \x1b[0;97m'
-        print ''
         time.sleep(1)
         log_menu()
     os.system('clear')
     print logo
-    print '\033[1;93m~~~~ Number pass cracking ~~~~'
+    print '\033[1;93m~~~~ Number pass cracking ~~~~\033[1;91m'
     print 47 * '-'
     print '\033[1;92m[1] Public id cloning'
     print '\033[1;92m[2] Followers cloning'
     print '\033[1;92m[3] File cloning'
     print '\033[1;92m[0] Back'
-    print ''
     c_s()
 def choice_crack():
     global token
@@ -635,19 +594,17 @@ def choice_crack():
         os.system('clear')
         print logo
         print '\033[1;93m~~~ Login FB id to continue ~~~'
-        print ''
         time.sleep(1)
         log_menu()
 
     os.system('clear')
     print logo
-    print '\033[1;93m~~~~ Number pass cracking ~~~~'
+    print '\033[1;93m~~~~ Number pass cracking ~~~~\033[1;91m'
     print 47 * '-'
     print '\033[1;92m[1] Public id cloning'
     print '\033[1;92m[2] Followers cloning'
     print '\033[1;92m[3] File cloning'
     print '\033[1;92m[B] Back'
-    print ''
     c_s()
 
 
@@ -659,9 +616,9 @@ def c_s():
     if a_s == '1':
         os.system('clear')
         print logo
-        print '\033[1;93m ~~~~ Number pass Public cracking ~~~~'
+        print '\033[1;93m ~~~~ Number pass Public cracking ~~~~\033[1;91m'
         print 47 * '-'
-        print '\033[1;93m For example:234567,223344,334455,445566'
+        print '\033[1;93m For example:234567,223344,334455,445566\033[1;91m'
         print 47 * '-'
         pass1 = raw_input(' \033[1;92m[1]Password: ')
         pass2 = raw_input(' \033[1;92m[2]Password: ')
@@ -676,12 +633,9 @@ def c_s():
             os.system('clear')
             print logo
             print '\033[1;93m ~~~~ Number pass Public cracking ~~~~'
-            print ''
             print ' Cloning from: ' + z
         except (KeyError, IOError):
-            print ''
             print '\t Invalid user \x1b[0;97m'
-            print ''
             raw_input(' Press enter to try again ')
             choice_crack()
 
@@ -696,9 +650,9 @@ def c_s():
     elif a_s == '2':
         os.system('clear')
         print logo
-        print '\033[1;93m~~~~ Number pass followers cracking ~~~~'
+        print '\033[1;93m~~~~ Number pass followers cracking ~~~~\033[1;91m'
         print 47 * '-'
-        print '\033[1;93m For example:234567,223344,334455,445566'
+        print '\033[1;93m For example:234567,223344,334455,445566\033[1;91m'
         print 47 * '-'
         pass1 = raw_input(' \033[1;92m[1]Password: ')
         pass2 = raw_input(' \033[1;92m[2]Password: ')
@@ -712,14 +666,10 @@ def c_s():
             z = q['name']
             os.system('clear')
             print logo
-            print ''
             print '\033[1;93m~~~~ Number pass followers cracking ~~~~'
-            print ''
             print ' Cloning from: ' + z
         except (KeyError, IOError):
-            print ''
             print '\t Invalid user \x1b[0;97m'
-            print ''
             raw_input('Press enter to try again ')
             auto_crack()
 
@@ -734,9 +684,9 @@ def c_s():
     elif a_s == '3':
         os.system('clear')
         print logo
-        print '\033[1;93m ~~~~ Number pass File cracking ~~~~'
+        print '\033[1;93m ~~~~ Number pass File cracking ~~~~\033[1;91m'
         print 47 * '-'
-        print '\033[1;93m For example:234567,223344,334455,445566'
+        print '\033[1;93m For example:234567,223344,334455,445566\033[1;91m'
         print 47 * '-'
         pass1 = raw_input(' \033[1;92m[1]Password: ')
         pass2 = raw_input(' \033[1;92m[2]Password: ')
@@ -755,14 +705,13 @@ def c_s():
     else:
         print ''
         print '\t Choose valid option' + w
-        print ''
         c_s()
     print ' Total ids: ' + str(len(id))
     time.sleep(0.5)
-    print ' \033[1;97m~~~ Crack Running ~~~ '
+    print ' \033[1;97m~~~ Crack Running ~~~\033[1;91m'
     time.sleep(0.5)
     print 47 * '-'
-    print '\t\033[1;94mJam King Of Fcebook'
+    print '\t\033[1;94mJam King Of Fcebook\033[1;91m'
     print 47 * '-'
     
     def main(arg):
@@ -836,14 +785,10 @@ def c_s():
 
     p = ThreadPool(30)
     p.map(main, id)
-    print ''
     print 47 * '-'
-    print ''
     print ' \033[1;92mCrack Done'
     print '\033[1;92m Total Ok/Cp:' + str(len(oks)) + '/' + str(len(cps))
-    print ''
     print 47 * '-'
-    print ''
     raw_input('\033[1;93m Press enter to back')
     choice_crack()
 
