@@ -143,7 +143,7 @@ def log_menu():
     except (KeyError, IOError):
         os.system('clear')
         print logo
-        print '\033[1;93m ~~~~ Login menu ~~~~'
+        print '\033[1;93m ~~~~ Login menu ~~~~\033[1;91m'
 	print 47 * '-'
         print '\033[1;92m[1] Login with FaceBook'
         print '\033[1;92m[2] Login with token'
